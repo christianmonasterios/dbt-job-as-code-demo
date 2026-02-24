@@ -27,7 +27,7 @@ jobs:
         run: pip install dbt-jobs-as-code~=0.7.0
 
       - name: Run dbt-jobs-as-code
-        run: dbt-jobs-as-code sync jobs/jobs.yml --vars-yml jobs/vars_prod.yml --limit-projects-envs-to-yml
+        run: dbt-jobs-as-code sync jobs/my_job_as_code.yml --vars-yml jobs/prod_vars.yml --limit-projects-envs-to-yml
 
         env: 
           DBT_API_KEY: "${{secrets.DBT_API_KEY}}"
