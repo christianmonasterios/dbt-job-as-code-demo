@@ -12,7 +12,7 @@ jobs:
     execution:
       timeout_seconds: 0
     generate_docs: false
-    name: "My first dbt Job as Code - Christian"
+    name: "My first dbt Job as Code - CM"
     run_generate_sources: true
     schedule:
       cron: "0 */2 * * *"
