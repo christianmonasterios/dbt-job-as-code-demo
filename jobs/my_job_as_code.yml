@@ -2,7 +2,7 @@
 
 jobs:
   job1:
-    account_id: 70471823524106
+    account_id: 70471823536967
     dbt_version: null
     deferring_job_definition_id: null
     project_id: "{{ project_id }}"
