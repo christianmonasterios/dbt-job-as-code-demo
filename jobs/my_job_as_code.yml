@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/dbt-labs/dbt-jobs-as-code/main/src/dbt_jobs_as_code/schemas/load_job_schema.json
+
+jobs:
+  job1:
+    account_id: 70471823524106
+    dbt_version: null
+    deferring_job_definition_id: null
+    project_id: "{{ project_id }}"
+    environment_id: "{{ environment_id }}"
+    execute_steps:
+    - "dbt run"
+    execution:
+      timeout_seconds: 0
+    generate_docs: false
+    name: "My first dbt Job as Code - Christian"
+    run_generate_sources: true
+    schedule:
+      cron: "0 */2 * * *"
+    settings:
+      target_name: Production
+      threads: 4
+    state: 1
+    triggers:
+      git_provider_webhook: false
+      github_webhook: false
+      # we can add more complex logic in Jinja based on our variables
+      schedule: "{{ env_type == 'prod' }}"
+    description: "Chritian Monasterios - Job Description properties"
