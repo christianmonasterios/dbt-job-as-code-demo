@@ -15,7 +15,7 @@ jobs:
     name: "My first dbt Job as Code - Christian"
     run_generate_sources: true
     schedule:
-      cron: "0 */2 * * *"
+      cron: "0 */1 * * *"
     settings:
       target_name: Production
       threads: 4
