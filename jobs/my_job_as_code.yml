@@ -25,4 +25,38 @@ jobs:
       github_webhook: false
       # we can add more complex logic in Jinja based on our variables
       schedule: "{{ env_type == 'prod' }}"
-    description: "Christian Monasterios - Job Description properties"
+    description: "Chritian Monasterios - Job Description properties"
+
+  manual_execution:
+    account_id: 70471823536967
+    project_id: "{{ project_id }}"
+    environment_id: "{{ environment_id }}"
+
+    name: "Manual Execution"
+    description: ""
+
+    dbt_version: "latest"
+    deferring_job_definition_id: null
+
+    execute_steps:
+      - "dbt build"
+
+    execution:
+      timeout_seconds: 0
+
+    settings:
+      threads: 4
+      target_name: default
+
+    schedule:
+      cron: "5 4 * * 0"
+
+    triggers:
+      schedule: true
+      github_webhook: false
+      git_provider_webhook: false
+
+    generate_docs: false
+    run_generate_sources: false
+
+    state: 1
