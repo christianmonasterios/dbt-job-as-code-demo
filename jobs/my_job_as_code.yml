@@ -25,4 +25,4 @@ jobs:
       github_webhook: false
       # we can add more complex logic in Jinja based on our variables
       schedule: "{{ env_type == 'prod' }}"
-    description: "Chritian Monasterios - Job Description properties"
+    description: "Christian Monasterios - Job Description properties"
