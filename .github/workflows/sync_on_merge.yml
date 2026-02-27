@@ -29,6 +29,7 @@ jobs:
       - name: Run dbt-jobs-as-code
         run: dbt-jobs-as-code sync jobs/my_job_as_code.yml --vars-yml jobs/prod_vars.yml --limit-projects-envs-to-yml
 
-        env: 
+        env:
+          # Define environment Variables on GIT / ADO
           DBT_API_KEY: "${{secrets.DBT_API_KEY}}"
           DBT_BASE_URL: "${{secrets.DBT_BASE_URL}}"

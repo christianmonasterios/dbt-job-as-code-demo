@@ -11,7 +11,7 @@ jobs:
     - "dbt run"
     execution:
       timeout_seconds: 0
-    generate_docs: false
+    generate_docs: true
     name: "My first dbt Job as Code - Chris"
     run_generate_sources: true
     schedule:
